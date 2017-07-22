@@ -1,0 +1,2 @@
+# myhadoop
+hadoop for partices
