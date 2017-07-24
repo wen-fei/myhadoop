@@ -47,5 +47,38 @@ hadoop for partices
 * 编译源码 make
 * 编译安装 make install
 ### 3.2 配置yum稳定的源
-* 更换aliyun的源
-1. 
+更换aliyun的源
+
+#### 1. 备份
+
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+
+#### 2. 下载新的CentOS-Base.repo 到/etc/yum.repos.d/
+
+CentOS 5
+ 
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo
+	
+CentOS 6
+	
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
+	
+CentOS 7
+
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+
+(如果没有wget，也可以直接去后面给的连接去下载下来上传到服务器)
+#### 3. 之后运行yum makecache生成缓存
+
+### 3.3 安装java jdk
+#### 1. 下载jdk，到官网下载npm的包，方便安装
+[http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html]()
+#### 2. 用npm命令安装
+#### 3. 配置环境变量
+* 编辑vi /etc/profile 或者 ~/.bash_profile
+* 在文件最后输入
+
+	export JAVA_HOME=/usr/java/jdk1.7.0_71
+	
+	export PATH=$PATH:$JAVA_HOME/bin
+* 生成 source ~/.bash_profile
