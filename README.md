@@ -35,3 +35,17 @@ hadoop for partices
 6. 修改hosts/etc/hosts 文件。
 
 	在文件最后增加一行  ：IP 地址  主机名
+### 3. 命令问题
+1. man命令不存在：
+
+解决办法： yum install man
+## 三、软件安装和管理
+### 3.1 安装Nginx
+* 下载源码注意下载稳定版[http://nginx.org/en/download.html](das)
+* 解压 tar -zxvf 文件名
+* 安装编译环境 用 npm grouplist Development tools安装所有编译环境，当然也可以单独安装
+* 编译源码 make
+* 编译安装 make install
+### 3.2 配置yum稳定的源
+* 更换aliyun的源
+1. 
