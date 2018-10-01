@@ -86,7 +86,7 @@ public class HDFSApp {
 
     @Test
     public void delete() throws IOException {
-        fileSystem.del ete(new Path("/hdfsapi/test/b.txt"), true);
+        fileSystem.delete(new Path("/hdfsapi/test/b.txt"), true);
     }
 
     @Test
